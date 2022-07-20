@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form class="w-75 mx-auto" action="evaluation" method="get">
+    <form class="w-75 mx-auto" action="evaluation" method="GET">
 
         <!-- add name -->
         <p class="mt-3">あなたの名前を入力してください。</p>
@@ -27,15 +27,15 @@
         <p class="mt-3">1. 遅刻はなく、始業時間には業務が開始できる状態にある。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q1" id="S" value="S">
+                <input class="form-check-input" type="radio" name="q1" id="q1" value="S">
                 <label class="form-check-label" for="S"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q1" id="A" value="A">
+                <input class="form-check-input" type="radio" name="q1" id="q1" value="A">
                 <label class="form-check-label" for="A"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q1" id="B" value="B">
+                <input class="form-check-input" type="radio" name="q1" id="q1" value="B">
                 <label class="form-check-label" for="B"> - □ (四角)</label>
             </div>
         </div>
@@ -46,15 +46,15 @@
         <p class="mt-3">2. 上司に報告せず、理由なく早退していない。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q2" id="S" value="S">
+                <input class="form-check-input" type="radio" name="q2" id="q2" value="S">
                 <label class="form-check-label" for="S"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q2" id="A" value="A">
+                <input class="form-check-input" type="radio" name="q2" id="q2" value="A">
                 <label class="form-check-label" for="A"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q2" id="B" value="B">
+                <input class="form-check-input" type="radio" name="q2" id="q2" value="B">
                 <label class="form-check-label" for="B"> - □ (四角)</label>
             </div>
         </div>
@@ -62,15 +62,15 @@
         <!-- question3 -->
         <p class="mt-3">3. 事前申告のない無断欠勤はない。</p>
         <fieldset id="group1">
-            <input type="radio" value="value1" name="group1">
-            <input type="radio" value="value2" name="group1">
-            <input type="radio" value="value3" name="group1">
+            <input type="radio" value="value1" name="group1" id="group1">
+            <input type="radio" value="value2" name="group1" id="group1">
+            <input type="radio" value="value3" name="group1" id="group1">
 
 
           </fieldset>
 
         <!-- submit button -->
-        <input type="submit" class="mt-4 btn btn-primary" value="submit">
+        <input class="mt-4 btn btn-primary" type="submit"  value="submit">
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
