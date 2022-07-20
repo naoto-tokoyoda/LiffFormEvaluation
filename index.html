@@ -27,16 +27,16 @@
         <p class="mt-3">1. 遅刻はなく、始業時間には業務が開始できる状態にある。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q1" id="q1" value="S">
-                <label class="form-check-label" for="S"> - ◯ (丸)</label>
+                <input class="form-check-input" type="radio" name="question1" id="q1" value="S">
+                <label class="form-check-label" for="q1"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q1" id="q1" value="John">
-                <label class="form-check-label" for="A"> - △ (三角)</label>
+                <input class="form-check-input" type="radio" name="question1" id="q1" value="A">
+                <label class="form-check-label" for="q1"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q1" id="q1" value="doe">
-                <label class="form-check-label" for="B"> - □ (四角)</label>
+                <input class="form-check-input" type="radio" name="question1" id="q1" value="B">
+                <label class="form-check-label" for="q1"> - □ (四角)</label>
             </div>
         </div>
 
@@ -46,28 +46,35 @@
         <p class="mt-3">2. 上司に報告せず、理由なく早退していない。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q2" id="q2" value="S">
-                <label class="form-check-label" for="S"> - ◯ (丸)</label>
+                <input class="form-check-input" type="radio" name="question2" id="question2" value="S">
+                <label class="form-check-label" for="question2"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q2" id="q2" value="A">
-                <label class="form-check-label" for="A"> - △ (三角)</label>
+                <input class="form-check-input" type="radio" name="question2" id="question2" value="A">
+                <label class="form-check-label" for="question2"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="q2" id="q2" value="B">
-                <label class="form-check-label" for="B"> - □ (四角)</label>
+                <input class="form-check-input" type="radio" name="question2" id="question2" value="B">
+                <label class="form-check-label" for="question2"> - □ (四角)</label>
             </div>
         </div>
 
         <!-- question3 -->
         <p class="mt-3">3. 事前申告のない無断欠勤はない。</p>
-        <fieldset id="group1">
-            <input type="radio" value="value1" name="group1" id="group1">
-            <input type="radio" value="value2" name="group1" id="group1">
-            <input type="radio" value="value3" name="group1" id="group1">
-
-
-          </fieldset>
+        <div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="question3" value="S">
+                <label class="form-check-label" for="question3"> - ◯ (丸)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="question3" value="A">
+                <label class="form-check-label" for="question3"> - △ (三角)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question3" id="question3" value="B">
+                <label class="form-check-label" for="question3"> - □ (四角)</label>
+            </div>
+        </div>
 
         <!-- submit button -->
         <input class="mt-4 btn btn-primary" type="submit"  value="submit">
@@ -113,9 +120,9 @@
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
                 const mailAddress = $('input[name="mailAddress"]').val();
-                const q1  = $('input[name="q1"]').val();
-                const q2  = $('input[name="q2"]').val();
-                const q3 = $('input[name="group1"]').val();
+                const q1  = $('input[name="question1"]').val();
+                const q2  = $('input[name="question2"]').val();
+                const q3 = $('input[name="question3"]').val();
                 const msg = `${name}\n${mailAddress}\n${q1}\n${q2}\n${q3}`;
                 sendText(msg);
                 return false;
