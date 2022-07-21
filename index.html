@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form class="w-75 mx-auto" method="GET">
+    <form class="w-75 mx-auto" method="GET" id="submit">
 
         <!-- add name -->
         <p class="mt-3">あなたの名前を入力してください。</p>
@@ -27,15 +27,15 @@
         <p class="mt-3">1. 遅刻はなく、始業時間には業務が開始できる状態にある。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question1" id="question1" value="S">
+                <input class="form-check-input q1" type="radio" name="question1" id="question1" value="S">
                 <label class="form-check-label" for="question1"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question1" id="question1" value="A">
+                <input class="form-check-input q1" type="radio" name="question1" id="question1" value="A">
                 <label class="form-check-label" for="question1"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question1" id="question1" value="B">
+                <input class="form-check-input q1" type="radio" name="question1" id="question1" value="B">
                 <label class="form-check-label" for="question1"> - □ (四角)</label>
             </div>
         </div>
@@ -46,15 +46,15 @@
         <p class="mt-3">2. 上司に報告せず、理由なく早退していない。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question2" id="question2" value="S">
+                <input class="form-check-input q2" type="radio" name="question2" id="question2" value="S">
                 <label class="form-check-label" for="question2"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question2" id="question2" value="A">
+                <input class="form-check-input q2" type="radio" name="question2" id="question2" value="A">
                 <label class="form-check-label" for="question2"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question2" id="question2" value="B">
+                <input class="form-check-input q2" type="radio" name="question2" id="question2" value="B">
                 <label class="form-check-label" for="question2"> - □ (四角)</label>
             </div>
         </div>
@@ -63,15 +63,15 @@
         <p class="mt-3">3. 事前申告のない無断欠勤はない。</p>
         <div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="question3" value="S">
+                <input class="form-check-input q3" type="radio" name="question3" id="question3" value="S">
                 <label class="form-check-label" for="question3"> - ◯ (丸)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="question3" value="A">
+                <input class="form-check-input q3" type="radio" name="question3" id="question3" value="A">
                 <label class="form-check-label" for="question3"> - △ (三角)</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="question3" id="question3" value="B">
+                <input class="form-check-input q3" type="radio" name="question3" id="question3" value="B">
                 <label class="form-check-label" for="question3"> - □ (四角)</label>
             </div>
         </div>
@@ -79,6 +79,7 @@
         <!-- submit button -->
         <input class="mt-4 btn btn-primary" type="submit"  value="submit">
     </form>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -120,10 +121,17 @@
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
                 const mailAddress = $('input[name="mailAddress"]').val();
-                const q1  = $('input[name="question1"]').val();
-                const q2  = $('input[name="question2"]').val();
-                const q3 = $('input[name="question3"]').val();
+                const q1  = $("input[name='question1']:checked").val();
+                const q2  = $("input[name='question2']:checked").val();
+                const q3 = $("input[name='question3']:checked").val();
+
+
                 const msg = `${name}\n${mailAddress}\n${q1}\n${q2}\n${q3}`;
+                console.log("name: " + name);
+                console.log("mailAddress: " + mailAddress);
+                console.log("q1: " + q1);
+                console.log("q2: " + q2);
+                console.log("q3: " + q3);
                 sendText(msg);
                 return false;
             });
