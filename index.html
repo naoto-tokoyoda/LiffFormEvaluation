@@ -14,16 +14,22 @@
         <!-- add name -->
         <p class="mt-3">あなたの名前を入力してください。</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" required>
+            <input class="form-control w-100 mt-1" name="name" placeholder="入力例: 山田太郎" required>
         </div>
 
         <!-- mail address -->
         <p class="mt-3">メールアドレスを入力してください。</p>
         <div>
-            <input class="form-control w-100 mt-1" name="mailAddress" required>
+            <input class="form-control w-100 mt-1" name="mailAddress" type="email" placeholder="入力例: info@example.com" required>
         </div>
 
-        <!-- question1 -->
+        <br>
+        <br>
+
+        <!-- question group1 -->
+        <h2> 
+            <u>諸ルールの遵守</u> 
+        </h2>
         <p class="mt-3">1. 遅刻はなく、始業時間には業務が開始できる状態にある。</p>
         <div>
             <div class="form-check form-check-inline">
@@ -76,8 +82,126 @@
             </div>
         </div>
 
+        <br>
+        <br>
+
+         <!-- question group2 -->
+         <h2>
+             <u>事務処理および報告等</u> 
+        </h2>
+         <p class="mt-3">1. 上司への報告、連絡、相談を適切に行っている。</p>
+         <div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q1" type="radio" name="question4" id="question4" value="S">
+                 <label class="form-check-label" for="question4"> - ◯ (丸)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q1" type="radio" name="question4" id="question4" value="A">
+                 <label class="form-check-label" for="question4"> - △ (三角)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q1" type="radio" name="question4" id="question4" value="B">
+                 <label class="form-check-label" for="question4"> - □ (四角)</label>
+             </div>
+         </div>
+ 
+        
+ 
+         <!-- question2 -->
+         <p class="mt-3">2. 日報報告書の作成処理は適切に行い、期限内に提出している。</p>
+         <div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q2" type="radio" name="question5" id="question5" value="S">
+                 <label class="form-check-label" for="question5"> - ◯ (丸)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q2" type="radio" name="question5" id="question5" value="A">
+                 <label class="form-check-label" for="question5"> - △ (三角)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q2" type="radio" name="question5" id="question5" value="B">
+                 <label class="form-check-label" for="question5"> - □ (四角)</label>
+             </div>
+         </div>
+ 
+         <!-- question3 -->
+         <p class="mt-3">3. 常に周囲の整理、整頓や清掃を行う等、作業しやすく衛生的な環境づくりに努めている。</p>
+         <div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q3" type="radio" name="question6" id="question6" value="S">
+                 <label class="form-check-label" for="question6"> - ◯ (丸)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q3" type="radio" name="question6" id="question6" value="A">
+                 <label class="form-check-label" for="question6"> - △ (三角)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q3" type="radio" name="question6" id="question6" value="B">
+                 <label class="form-check-label" for="question6"> - □ (四角)</label>
+             </div>
+         </div>
+
+         <br>
+         <br>
+
+         <!-- question group3 -->
+         <h2> 
+             <u>協調性、規律性</u> 
+        </h2>
+         <p class="mt-3">1. 挨拶、敬語、態度など、状況や相手に相応しい適切な行動をとっている。</p>
+         <div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q1" type="radio" name="question7" id="question7" value="S">
+                 <label class="form-check-label" for="question7"> - ◯ (丸)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q1" type="radio" name="question7" id="question7" value="A">
+                 <label class="form-check-label" for="question7"> - △ (三角)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q1" type="radio" name="question7" id="question7" value="B">
+                 <label class="form-check-label" for="question7"> - □ (四角)</label>
+             </div>
+         </div>
+ 
+        
+ 
+         <!-- question2 -->
+         <p class="mt-3">2. 上司や先輩からの助言や指導に沿った行動をとっている。</p>
+         <div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q2" type="radio" name="question8" id="question8" value="S">
+                 <label class="form-check-label" for="question8"> - ◯ (丸)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q2" type="radio" name="question8" id="question8" value="A">
+                 <label class="form-check-label" for="question8"> - △ (三角)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q2" type="radio" name="question8" id="question8" value="B">
+                 <label class="form-check-label" for="question8"> - □ (四角)</label>
+             </div>
+         </div>
+ 
+         <!-- question3 -->
+         <p class="mt-3">3. 余力がある場合には、進んで周囲の仕事を手伝っている。</p>
+         <div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q3" type="radio" name="question9" id="question9" value="S">
+                 <label class="form-check-label" for="question9"> - ◯ (丸)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q3" type="radio" name="question9" id="question9" value="A">
+                 <label class="form-check-label" for="question9"> - △ (三角)</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input q3" type="radio" name="question9" id="question9" value="B">
+                 <label class="form-check-label" for="question9"> - □ (四角)</label>
+             </div>
+         </div>
+
         <!-- submit button -->
-        <input class="mt-4 btn btn-primary" type="submit"  value="submit">
+        <input class="mt-4 btn btn-primary" type="submit"  value="送信">
     </form>
     
 
@@ -87,12 +211,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
-
+        //set up with liff ID
         $(document).ready(function () {
             const liffId = "1657250133-PxvKNJLX";
             initializeLiff(liffId);
         })
 
+        //initialize Liff
         function initializeLiff(liffId) {
             liff.init({
                 liffId: liffId
@@ -103,6 +228,7 @@
             });
         }
 
+        //send text
         function sendText(text) {
             liff.sendMessages([{
                 'type': 'text',
@@ -123,15 +249,17 @@
                 const mailAddress = $('input[name="mailAddress"]').val();
                 const q1  = $("input[name='question1']:checked").val();
                 const q2  = $("input[name='question2']:checked").val();
-                const q3 = $("input[name='question3']:checked").val();
+                const q3  = $("input[name='question3']:checked").val();
 
+                const q4  = $("input[name='question4']:checked").val();
+                const q5  = $("input[name='question5']:checked").val();
+                const q6  = $("input[name='question6']:checked").val();
 
-                const msg = `${name}\n${mailAddress}\n${q1}\n${q2}\n${q3}`;
-                console.log("name: " + name);
-                console.log("mailAddress: " + mailAddress);
-                console.log("q1: " + q1);
-                console.log("q2: " + q2);
-                console.log("q3: " + q3);
+                const q7  = $("input[name='question7']:checked").val();
+                const q8  = $("input[name='question8']:checked").val();
+                const q9  = $("input[name='question9']:checked").val();
+
+                const msg = `${name}\n${mailAddress}\n${q1}\n${q2}\n${q3}\n${q4}\n${q5}\n${q6}\n${q7}\n${q8}\n${q9}`;
                 sendText(msg);
                 return false;
             });
